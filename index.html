@@ -1,21 +1,4 @@
-<?php
-    if ($_SERVER["QUERY_STRING"]) {
-        switch ($_SERVER["QUERY_STRING"]) {
-            case "js":
-                header('Content-type: text/javascript');
-                $myfile = fopen("js.js", "r") or die("console.error('ScpoHL Error - Cannot Connect The Server.')");
-                die(fread($myfile, filesize("js.js")));
-            case "css":
-                header('Content-type: text/css');
-                $myfile = fopen("css.css", "r") or die();
-                die(fread($myfile, filesize("css.css")));
-            case "test":
-                $myfile = fopen("test.html", "r") or die("<h1>Connect Failed!</h1>");
-                die(fread($myfile, filesize("test.html")));
-        }
-        die("Error - Unrecognized Parameter.");
-    } else {
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -35,7 +18,7 @@
     <style>
         @font-face {
             font-family: 'consolas';
-            src: url('//sc.seventop.top/consolas.ttf') format('truetype');
+            src: url('./consolas.ttf') format('truetype');
         }
     </style>
 </head>
@@ -57,14 +40,13 @@
             </p><p>
                 You can use<br />
                 <code style="overflow: auto;">
-                    &lt;link href="//scpohl.seventop.top/?css" rel="stylesheet"><br />
-                    &lt;script src="//js.seventop.top/?scpoUsefulFunc.js">&lt;/script><br />
-                    &lt;script src="//scpohl.seventop.top/?js">&lt;/script>
+                    &lt;link href="//n9gc.github.io/hl/css" rel="stylesheet"><br />
+                    &lt;script src="//n9gc.github.io/hl/js">&lt;/script>
                 </code><br />
                 to get the ScpoHL.
             </p><p>
                 If you have any problems,<br />
-                please email Scpos@163.com.<br />
+                please contact <a href="https://github.com/n9gc">Scpos</a>.<br />
             </p><p>
                 Being able to support your project is our pleasure.
             </p>
@@ -72,6 +54,3 @@
     </div>
 </body>
 </html>
-<?php 
-}
-?>
