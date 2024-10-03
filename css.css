@@ -1,0 +1,30 @@
+[class*="scpo-code-"] {
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	background: #222222;
+	color: #fff;
+	white-space: pre;
+	margin: 0;
+	padding: 0;
+}
+.scpo-code--bg {
+	background: #8b888f;
+}
+.scpo-code-js-keyword {
+	color: rgb(29, 12, 161);
+}
+.scpo-code-js-string {
+	color: #fce566;
+}
+.scpo-code-js-symbol {
+	color: #8b888f;
+}
+.scpo-code-js-note {
+	color: #69676c;
+	font-style: italic;
+}
+.scpo-code-js-operator {
+	color: #fc618d;
+}
+.scpo-code-js-escape {
+	color: #948ae3;
+}
